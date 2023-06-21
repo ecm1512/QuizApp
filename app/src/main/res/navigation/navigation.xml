@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/chooseCategoryFragment">
+
+    <fragment
+        android:id="@+id/chooseCategoryFragment"
+        android:name="com.educode.quizapp.presentation.home.choose.ChooseCategoryFragment"
+        android:label="ChooseCategoryFragment"
+        tools:layout="@layout/fragment_choose_category">
+        <action
+            android:id="@+id/action_chooseCategoryFragment_to_questionFragment"
+            app:destination="@id/questionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/questionFragment"
+        android:name="com.educode.quizapp.presentation.home.question.QuestionFragment"
+        android:label="fragment_question"
+        tools:layout="@layout/fragment_question" >
+        <argument
+            android:name="category"
+            app:argType="com.educode.quizapp.util.Category" />
+        <action
+            android:id="@+id/action_questionFragment_to_scoreFragment"
+            app:destination="@id/scoreFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/scoreFragment"
+        android:name="com.educode.quizapp.presentation.home.score.ScoreFragment"
+        android:label="ScoreFragment"
+        tools:layout="@layout/fragment_score">
+        <argument
+            android:name="score"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_scoreFragment_to_chooseCategoryFragment2"
+            app:destination="@id/chooseCategoryFragment" />
+    </fragment>
+</navigation>

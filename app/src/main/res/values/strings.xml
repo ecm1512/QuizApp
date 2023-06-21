@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">QuizApp</string>
+    <string name="choose_category_fragment_title">Choose Category</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="btn_share">Share</string>
+    <string name="btn_next">Next</string>
+    <string name="timeout">Ups Time Out!</string>
+    <string name="try_again">Try Again</string>
+    <string name="retry">Retry</string>
+</resources>
