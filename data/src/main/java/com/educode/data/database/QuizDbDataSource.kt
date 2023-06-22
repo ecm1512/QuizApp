@@ -18,7 +18,6 @@ class QuizDbDataSource @Inject constructor(db: QuizDatabase): LocalDataSource {
 
     override suspend fun insertQuestions(question: List<Question>){
         return withContext(Dispatchers.IO){
-            Log.e("bola bolita","error")
             questionDao.insertQuestions(question)
         }
     }

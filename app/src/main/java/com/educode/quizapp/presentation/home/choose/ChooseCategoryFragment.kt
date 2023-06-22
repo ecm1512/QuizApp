@@ -58,7 +58,7 @@ class ChooseCategoryFragment : Fragment() {
                             handleLoading(isLoading = false)
                             Snackbar.make(
                                 requireContext(), binding.constraintChooseCategory,
-                                it.error,
+                                "Error ${it.error}",
                                 Toast.LENGTH_SHORT
                             ).show()
                         }
